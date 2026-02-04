@@ -1,5 +1,4 @@
-import SectionContainer from '../shared/SectionContainer';
-import ContactForm from './ContactForm';
+import SectionContainer from '@/components/shared/SectionContainer';
 
 export default function ContactSection() {
   const contactMethods = [
@@ -7,14 +6,12 @@ export default function ContactSection() {
       type: "email",
       label: "Email",
       value: "info@elitelevel.services",
-      icon: "✉",
       href: "mailto:info@elitelevel.services"
     },
     {
       type: "telegram",
       label: "Telegram",
       value: "@elitelevel",
-      icon: "✈",
       href: "https://t.me/elitelevel"
     }
   ];
@@ -33,28 +30,30 @@ export default function ContactSection() {
         </div>
 
         {/* Contact Methods */}
-        <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 max-w-2xl mx-auto">
           {contactMethods.map((method) => (
             <a
               key={method.type}
               href={method.href}
-              className="flex items-center space-x-3 px-6 py-4 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-amber-400/50 transition-all group"
+              target={method.type === 'telegram' ? '_blank' : undefined}
+              rel={method.type === 'telegram' ? 'noopener noreferrer' : undefined}
+              className="group relative p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl hover:border-amber-400/50 transition-all hover:bg-zinc-900/50"
             >
-              <span className="text-2xl">{method.icon}</span>
-              <div className="text-left">
-                <div className="text-sm text-zinc-500">{method.label}</div>
-                <div className="text-zinc-50 group-hover:text-amber-400 transition-colors">
-                  {method.value}
-                </div>
+              <div className="text-sm font-medium text-zinc-500 mb-2">{method.label}</div>
+              <div className="text-lg font-medium text-zinc-50 group-hover:text-amber-400 transition-colors">
+                {method.value}
+              </div>
+              <div className="absolute top-6 right-6 text-amber-400/20 group-hover:text-amber-400/40 transition-colors">
+                →
               </div>
             </a>
           ))}
         </div>
 
         {/* Contact Form */}
-        <div className="bg-zinc-900/30 border border-zinc-800 rounded-2xl p-8 md:p-12">
+        {/* <div className="bg-zinc-900/30 border border-zinc-800 rounded-2xl p-8 md:p-12">
           <ContactForm />
-        </div>
+        </div> */}
       </div>
     </SectionContainer>
   );

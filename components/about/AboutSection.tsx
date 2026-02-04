@@ -1,5 +1,5 @@
-import SectionContainer from '../shared/SectionContainer';
-import BenefitItem from './BenefitItem';
+import SectionContainer from '@/components/shared/SectionContainer';
+import BenefitItem from '@/components/about/BenefitItem';
 
 export default function AboutSection() {
   const benefits = [

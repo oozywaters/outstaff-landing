@@ -1,5 +1,5 @@
-import SectionContainer from '../shared/SectionContainer';
-import ServiceCard from './ServiceCard';
+import SectionContainer from '@/components/shared/SectionContainer';
+import ServiceCard from '@/components/services/ServiceCard';
 
 export default function ServicesSection() {
   const services = [

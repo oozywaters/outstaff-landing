@@ -1,7 +1,7 @@
 'use client';
 
-import CTAButton from './CTAButton';
-import SectionContainer from '../shared/SectionContainer';
+import CTAButton from '@/components/hero/CTAButton';
+import SectionContainer from '@/components/shared/SectionContainer';
 
 export default function HeroSection() {
   const scrollToContact = () => {
