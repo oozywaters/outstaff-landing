@@ -68,16 +68,6 @@ export default function Footer() {
                   info@elitelevel.services
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://t.me/elitelevel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-zinc-400 hover:text-amber-400 transition-colors"
-                >
-                  @elitelevel
-                </a>
-              </li>
             </ul>
           </div>
         </div>
