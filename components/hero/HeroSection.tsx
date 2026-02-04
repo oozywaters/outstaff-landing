@@ -1,17 +1,6 @@
-'use client';
-
-import CTAButton from '@/components/hero/CTAButton';
 import SectionContainer from '@/components/shared/SectionContainer';
 
 export default function HeroSection() {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToServices = () => {
-    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <SectionContainer
       id="hero"
@@ -42,12 +31,18 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <CTAButton onClick={scrollToContact}>
+          <a
+            href="#contact"
+            className="px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 hover:scale-105 bg-amber-500 hover:bg-amber-400 text-black shadow-lg shadow-amber-500/20"
+          >
             Обсудить проект
-          </CTAButton>
-          <CTAButton variant="secondary" onClick={scrollToServices}>
+          </a>
+          <a
+            href="#services"
+            className="px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 hover:scale-105 border-2 border-zinc-700 hover:border-amber-400 text-zinc-50 hover:text-amber-400"
+          >
             Наши услуги
-          </CTAButton>
+          </a>
         </div>
       </div>
     </SectionContainer>

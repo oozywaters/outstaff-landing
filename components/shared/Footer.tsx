@@ -1,12 +1,5 @@
-'use client';
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <footer className="border-t border-zinc-800 bg-black">
@@ -14,12 +7,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Description */}
           <div>
-            <button
-              onClick={() => scrollToSection('hero')}
-              className="text-xl font-bold mb-4 hover:text-amber-400 transition-colors text-left"
+            <a
+              href="#hero"
+              className="text-xl font-bold mb-4 hover:text-amber-400 transition-colors inline-block"
             >
               Elite Level <span className="text-amber-400">Services</span>
-            </button>
+            </a>
             <p className="text-zinc-400 text-sm">
               Ваш партнёр в цифровой трансформации
             </p>
@@ -30,28 +23,28 @@ export default function Footer() {
             <h4 className="text-zinc-50 font-semibold mb-4">Услуги</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <button
-                  onClick={() => scrollToSection('services')}
+                <a
+                  href="#services"
                   className="text-zinc-400 hover:text-amber-400 transition-colors"
                 >
                   Аутстафф по T&M
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('services')}
+                <a
+                  href="#services"
                   className="text-zinc-400 hover:text-amber-400 transition-colors"
                 >
                   Разработка под ключ
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection('services')}
+                <a
+                  href="#services"
                   className="text-zinc-400 hover:text-amber-400 transition-colors"
                 >
                   IT-консалтинг
-                </button>
+                </a>
               </li>
             </ul>
           </div>

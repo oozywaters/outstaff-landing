@@ -28,11 +28,6 @@ export default function ContactSection() {
             </div>
           </a>
         </div>
-
-        {/* Contact Form */}
-        {/* <div className="bg-zinc-900/30 border border-zinc-800 rounded-2xl p-8 md:p-12">
-          <ContactForm />
-        </div> */}
       </div>
     </SectionContainer>
   );
