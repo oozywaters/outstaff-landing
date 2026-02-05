@@ -61,6 +61,11 @@ export default function Footer() {
                   info@elitelevel.services
                 </a>
               </li>
+              <li className="text-zinc-400 pt-2">
+                Район Сарыарка,<br />
+                Проспект Абая,<br />
+                здание 24/1
+              </li>
             </ul>
           </div>
         </div>
